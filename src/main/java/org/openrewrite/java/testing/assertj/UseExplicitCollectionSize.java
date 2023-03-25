@@ -47,6 +47,11 @@ public class UseExplicitCollectionSize extends Recipe {
     }
 
     @Override
+    public Duration getEstimatedEffortPerOccurrence() {
+        return Duration.ofMinutes(1);
+    }
+
+    @Override
     protected TreeVisitor<?, ExecutionContext> getVisitor() {
         return new UseExplicitSizeVisitor();
     }
@@ -96,7 +101,7 @@ public class UseExplicitCollectionSize extends Recipe {
             Expression list =  size.getSelect();
             Expression expectedSize = method.getArguments().get(0);
 
-            String template = "assertThat(#{any(java.util.List)}).hasSize(#{any()});";
+            String template = "assertThat(#{any(java.util.Collection)}).hasSize(#{any()});";
             return method.withTemplate(
                     JavaTemplate.builder(this::getCursor, template)
                             .javaParser(assertionsParser(ctx))
