@@ -30,10 +30,10 @@ import org.openrewrite.java.tree.J.MethodInvocation;
 import java.time.Duration;
 import java.util.function.Supplier;
 
-public class UseExplicitContains extends Recipe {
+public class UseExplicitCollectionContains extends Recipe {
     @Override
     public String getDisplayName() {
-        return "Use explicit contains in Assertj";
+        return "Use Assertj `contains()` or `doesNotContain()` on collections";
     }
 
     @Override

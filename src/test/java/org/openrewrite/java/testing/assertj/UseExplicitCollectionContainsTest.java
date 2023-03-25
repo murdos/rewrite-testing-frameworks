@@ -24,14 +24,14 @@ import org.openrewrite.test.RewriteTest;
 import static org.openrewrite.java.Assertions.java;
 
 @SuppressWarnings("ConstantConditions")
-class UseExplicitContainsTest implements RewriteTest {
+class UseExplicitCollectionContainsTest implements RewriteTest {
 
     @Override
     public void defaults(RecipeSpec spec) {
         spec
           .parser(JavaParser.fromJavaVersion()
             .classpathFromResources(new InMemoryExecutionContext(), "junit-jupiter-api-5.9+", "assertj-core-3.24+"))
-          .recipe(new UseExplicitContains());
+          .recipe(new UseExplicitCollectionContains());
     }
 
     @Test

@@ -24,7 +24,7 @@ tags:
 recipeList:
   - org.openrewrite.java.testing.assertj.StaticImports
   - org.openrewrite.java.testing.assertj.JUnitToAssertj
-  - org.openrewrite.java.testing.assertj.UseExplicitContains
+  - org.openrewrite.java.testing.assertj.UseExplicitCollectionContains
   - org.openrewrite.java.testing.assertj.UseExplicitSize
 
 ---
