@@ -30,7 +30,7 @@ import org.openrewrite.java.tree.J.MethodInvocation;
 import java.time.Duration;
 import java.util.function.Supplier;
 
-public class UseExplicitSize extends Recipe {
+public class UseExplicitCollectionSize extends Recipe {
     @Override
     public String getDisplayName() {
         return "Use AssertJ `hasSize()` on collections";
